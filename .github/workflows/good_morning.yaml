@@ -1,0 +1,16 @@
+name: good_morning
+
+on:
+    schedule:
+        - cron: "0 8 * * *"
+    workflow_dispatch:
+
+jobs:
+  goodMorningMessage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: | 
+          echo Good Morning!  
+          echo Remember, you are loved!
+          echo and you can do it!
