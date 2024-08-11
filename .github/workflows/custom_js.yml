@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      
+  
       - name: Run Custom JS Action
-        uses: ./.github/custom_js_actions@main
+        uses: ./.github/custom_js_actions@main  
         with:
           who-to-greet: 'GitHub Actions User'
 
