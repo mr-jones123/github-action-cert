@@ -1,18 +1,17 @@
-# name: Greet using JavaScript Actions
+name: Greet using JavaScript Actions
 
-# on: [push]
+on: [push]
 
-# jobs:
-#     build:
-#         runs-on : ubuntu-latest
-#         steps:
-#         - name : Checkout Repository
-#           uses: actions/checkout@v4
-
-#         - name: Run Custom JS Action
-#           uses: mr-jones123/github-action-cert/jsAction.yml@main
-#           with:
-#             who-to-greet: 'GitHub Actions User'
-
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Run Custom JS Action
+        uses: ./.github/custom_js_actions/jsAction.yml
+        with:
+          who-to-greet: 'GitHub Actions User'
 
 
